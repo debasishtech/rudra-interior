@@ -1,282 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudra Interior | Premium Interior Solutions in Kolkata</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-		  /* --- Logo Design --- */
-		.logo {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudra Interior | Premium Interior Solutions in Kolkata</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* --- Logo Design --- */
+.logo {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--dark-black);
-
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo span {
-    color: var(--primary-gold);
-}
+.logo span { color: var(--primary-gold); }
 
 .logo img {
     height: 65px;
     width: auto;
 }
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary-gold: #D4AF37; /* Premium Gold */
-            --dark-black: #1A1A1A;
-            --light-bg: #FAFAFA;
-            --white: #FFFFFF;
-            --text-gray: #555555;
-        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--light-bg); color: var(--dark-black); line-height: 1.6; }
-        h1, h2, h3 { font-weight: 700; }
-        a { text-decoration: none; color: inherit; }
-        section { padding: 80px 10%; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
-        .section-title span { color: var(--primary-gold); }
+/* --- CSS VARIABLES & RESET --- */
+:root {
+    --primary-gold: #D4AF37;
+    --dark-black: #1A1A1A;
+    --light-bg: #FAFAFA;
+    --white: #FFFFFF;
+    --text-gray: #555555;
+}
 
-        /* --- NAVIGATION --- */
-        header { position: fixed; top: 0; width: 100%; background: var(--white); padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
-        .logo { font-size: 1.8rem; font-weight: 700; color: var(--dark-black); }
-        .logo span { color: var(--primary-gold); }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { font-weight: 600; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary-gold); }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
 
-        /* --- HERO SECTION --- */
-        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--white); padding-top: 80px; }
-        .hero h1 { font-size: 4rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.5rem; margin-bottom: 30px; color: #ddd; }
-        .hero-subtitle { font-size: 1.1rem; color: var(--primary-gold); margin-bottom: 40px; letter-spacing: 1px; }
-        .btn-group { display: flex; gap: 20px; justify-content: center; }
-        .btn { padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 5px; transition: all 0.3s; }
-        .btn-gold { background: var(--primary-gold); color: var(--white); border: 2px solid var(--primary-gold); }
-        .btn-gold:hover { background: transparent; color: var(--primary-gold); }
-        .btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
-        .btn-outline:hover { background: var(--white); color: var(--dark-black); }
+body { background-color: var(--light-bg); color: var(--dark-black); line-height: 1.6; }
 
-        /* --- ABOUT SECTION --- */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .about-text h3 { font-size: 2rem; margin-bottom: 20px; color: var(--primary-gold); }
-        .about-text p { font-size: 1.1rem; color: var(--text-gray); margin-bottom: 15px; }
-        .about-text ul { list-style: none; margin-top: 20px; }
-        .about-text ul li { margin-bottom: 10px; font-weight: 600; }
-        .about-text ul li i { color: var(--primary-gold); margin-right: 10px; }
-        .about-img { width: 100%; height: 400px; background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover; border-radius: 10px; box-shadow: 10px 10px 0px var(--primary-gold); }
+h1, h2, h3 { font-weight: 700; }
 
-        /* --- SERVICES SECTION --- */
-        .services { background: var(--white); }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .service-card { background: var(--light-bg); padding: 30px; text-align: center; border-radius: 10px; transition: transform 0.3s; border-bottom: 4px solid transparent; }
-        .service-card:hover { transform: translateY(-10px); border-color: var(--primary-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .service-card i { font-size: 3rem; color: var(--primary-gold); margin-bottom: 20px; }
-        .service-card h3 { margin-bottom: 15px; }
+a { text-decoration: none; color: inherit; }
 
-        /* --- PROJECTS GALLERY --- */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .gallery-item { position: relative; overflow: hidden; border-radius: 10px; height: 300px; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .gallery-item:hover img { transform: scale(1.1); }
-        .gallery-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(26, 26, 26, 0.9); padding: 20px; color: var(--white); transform: translateY(100%); transition: transform 0.3s; }
-        .gallery-item:hover .gallery-overlay { transform: translateY(0); }
-        .gallery-overlay h4 { color: var(--primary-gold); margin-bottom: 5px; }
-        .gallery-overlay p { font-size: 0.9rem; margin: 2px 0; }
+section { padding: 80px 10%; }
 
-        /* --- WHY CHOOSE US --- */
-        .why-us { background: var(--dark-black); color: var(--white); }
-        .why-us .section-title { color: var(--white); }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
-        .why-card i { font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 15px; }
-        .why-card h4 { font-size: 1.2rem; }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        /* --- CONTACT SECTION --- */
-        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: var(--white); padding: 50px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .contact-info h3 { font-size: 2rem; margin-bottom: 20px; }
-        .contact-item { display: flex; align-items: center; margin-bottom: 20px; font-size: 1.1rem; }
-        .contact-item i { color: var(--primary-gold); font-size: 1.5rem; margin-right: 15px; width: 30px; text-align: center; }
-        .contact-btn { display: inline-block; padding: 12px 25px; background: var(--dark-black); color: var(--white); border-radius: 5px; margin-top: 10px; margin-right: 10px; }
-        .contact-btn.whatsapp { background: #25D366; }
+.section-title span { color: var(--primary-gold); }
 
-        /* --- FLOATING WHATSAPP --- */
-        .float-wa { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 100; display: flex; justify-content: center; align-items: center; transition: transform 0.3s; }
-        .float-wa:hover { transform: scale(1.1); color: white; }
+/* --- NAVIGATION --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
 
-        /* --- FOOTER --- */
-        footer { background: var(--dark-black); color: var(--white); text-align: center; padding: 20px; border-top: 2px solid var(--primary-gold); }
+.nav-links { display: flex; gap: 20px; }
 
-        /* --- RESPONSIVE DESIGN --- */
-        @media (max-width: 768px) {
-            .nav-links { display: none; } /* Mobile menu toggle requires JS, hidden for simplicity in raw HTML */
-            .hero h1 { font-size: 2.5rem; }
-            .about-grid, .contact-container { grid-template-columns: 1fr; }
-            .btn-group { flex-direction: column; }
-            section { padding: 50px 5%; }
-        }
-    </style>
+.nav-links a { font-weight: 600; transition: color 0.3s; }
+
+.nav-links a:hover { color: var(--primary-gold); }
+
+/* --- HERO --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0') center/cover;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+/* HERO TEXT ANIMATION */
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    animation: heroFade 1.2s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--primary-gold);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    animation: heroFade 1.8s ease-out;
+}
+
+@keyframes heroFade {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.btn-group { display: flex; gap: 20px; justify-content: center; }
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-gold { background: var(--primary-gold); color: var(--white); border: 2px solid var(--primary-gold); }
+
+.btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
+
+/* --- ABOUT --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-img {
+    width: 100%;
+    height: 400px;
+    background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6') center/cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px var(--primary-gold);
+}
+
+/* --- SERVICES --- */
+.services { background: var(--white); }
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--light-bg);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* --- GALLERY --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+    transition: transform 0.35s ease;
+}
+
+.gallery-item:hover { transform: scale(1.03); }
+
+/* --- WHY --- */
+.why-us { background: var(--dark-black); color: var(--white); }
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* --- CONTACT --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--white);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* --- FLOAT BUTTON --- */
+.float-wa {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--dark-black);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-    <div class="logo">
-        <img src="logo.png" alt="Rudra Interior Logo">
-        Rudra <span>Interior</span>
-    </div>
+<header>
+<div class="logo">
+<img src="logo.png">
+Rudra <span>Interior</span>
+</div>
 
-    <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Services</a>
+<a href="#gallery">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-   <section id="home" class="hero">
-    <div>
+<section id="home" class="hero">
+<div>
+<h1>Kolkata’s Trusted Interior Designer</h1>
+<p class="hero-subtitle">Custom Interior Solutions by Rudra Interior</p>
 
-        <h1>Kolkata’s Trusted Interior Designer</h1>
+<div class="btn-group">
+<a href="tel:+919836421193" class="btn btn-gold">📞 Call Now</a>
+<a href="https://wa.me/919836421193" class="btn btn-outline">💬 WhatsApp</a>
+<a href="mailto:sagardas811980@gmail.com" class="btn btn-outline">Get Quote</a>
+</div>
 
-        <p class="hero-subtitle">
-            Custom Interior Solutions by Rudra Interior
-        </p>
-
-        <div class="btn-group">
-
-            <a href="tel:+919836421193" class="btn btn-gold">
-                📞 Call Now
-            </a>
-
-            <a href="https://wa.me/919836421193" target="_blank" class="btn btn-outline">
-                💬 WhatsApp
-            </a>
-
-            <a href="mailto:sagardas811980@gmail.com" class="btn btn-outline">
-                Get Quote
-            </a>
-
-        </div>
-
-        <p style="margin-top:25px;color:#ddd;font-weight:600">
-            ⭐ Free Site Visit • Custom Design • Budget to Premium
-        </p>
-
-    </div>
+<p style="margin-top:25px;color:#ddd;font-weight:600">
+⭐ Free Site Visit • Custom Design • Budget to Premium
+</p>
+</div>
 </section>
 
-    <section id="about">
-        <h2 class="section-title">About <span>Us</span></h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <h3>Artistic Excellence in Every Detail</h3>
-                <p>Rudra Interior is a one-man creative studio delivering premium interior solutions with artistic excellence. Led by <strong>Sagar Das</strong>, a skilled Interior Designer and Fine Artist, we specialize in bringing custom, difficult designs to life.</p>
-                <ul>
-                    <li><i class="fas fa-user-tie"></i> <strong>Owner:</strong> Sagar Das</li>
-                    <li><i class="fas fa-paint-brush"></i> <strong>Experience:</strong> Interior Designer & Fine Artist</li>
-                    <li><i class="fas fa-tools"></i> <strong>Specialty:</strong> Difficult & Custom Designs</li>
-                    <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Laketown, Kolkata</li>
-                </ul>
-            </div>
-            <div class="about-img"></div>
-        </div>
-    </section>
+<section id="about" class="fade-in">
+<h2 class="section-title">About <span>Us</span></h2>
+<div class="about-grid">
+<div class="about-text">
+<h3>Artistic Excellence in Every Detail</h3>
+<p>Rudra Interior is a one-man creative studio delivering premium interior solutions...</p>
+</div>
+<div class="about-img"></div>
+</div>
+</section>
 
-    <section id="services" class="services">
-        <h2 class="section-title">Our <span>Services</span></h2>
-        <div class="service-grid">
-            <div class="service-card"><i class="fas fa-bed"></i><h3>Bedroom Interior</h3></div>
-            <div class="service-card"><i class="fas fa-utensils"></i><h3>Modular Kitchen</h3></div>
-            <div class="service-card"><i class="fas fa-door-closed"></i><h3>Wardrobe & Storage</h3></div>
-            <div class="service-card"><i class="fas fa-tv"></i><h3>TV Unit</h3></div>
-            <div class="service-card"><i class="fas fa-border-all"></i><h3>False Ceiling</h3></div>
-            <div class="service-card"><i class="fas fa-couch"></i><h3>Custom Furniture</h3></div>
-            <div class="service-card"><i class="fas fa-building"></i><h3>Commercial Interior</h3></div>
-        </div>
-    </section>
+<section id="services" class="services fade-in">
+<h2 class="section-title">Our <span>Services</span></h2>
+</section>
 
-    <section id="gallery">
-        <h2 class="section-title">Our <span>Projects</span></h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kitchen">
-                <div class="gallery-overlay">
-                    <h4>Premium Modular Kitchen</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Location: Salt Lake, Kolkata</p>
-                    <p><i class="fas fa-box"></i> Material: High-Gloss Acrylic & CenturyPly</p>
-                    <p><i class="fas fa-tag"></i> Budget: ₹1.5L - ₹2.5L</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bedroom">
-                <div class="gallery-overlay">
-                    <h4>Luxury Master Bedroom</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Location: Laketown, Kolkata</p>
-                    <p><i class="fas fa-box"></i> Material: Teak Veneer & PU Polish</p>
-                    <p><i class="fas fa-tag"></i> Budget: ₹2.0L - ₹3.5L</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Living Room TV Unit">
-                <div class="gallery-overlay">
-                    <h4>Custom TV Unit & False Ceiling</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Location: New Town, Kolkata</p>
-                    <p><i class="fas fa-box"></i> Material: Duco Paint & Louvers</p>
-                    <p><i class="fas fa-tag"></i> Budget: ₹60k - ₹1.2L</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="gallery" class="fade-in">
+<h2 class="section-title">Our <span>Projects</span></h2>
+</section>
 
-    <section id="why-us" class="why-us">
-        <h2 class="section-title">Why Choose <span>Rudra Interior</span></h2>
-        <div class="why-grid">
-            <div class="why-card"><i class="fas fa-user-shield"></i><h4>One-Man Dedicated Designer</h4><p>Sagar Das handles your project personally from start to finish.</p></div>
-            <div class="why-card"><i class="fas fa-palette"></i><h4>Custom & Artistic Work</h4><p>Unique designs tailored to your taste and lifestyle.</p></div>
-            <div class="why-card"><i class="fas fa-wallet"></i><h4>Budget Friendly Options</h4><p>Premium aesthetics at competitive prices.</p></div>
-            <div class="why-card"><i class="fas fa-check-circle"></i><h4>Branded Materials</h4><p>We use top-quality, durable materials.</p></div>
-            <div class="why-card"><i class="fas fa-hard-hat"></i><h4>On-Site Supervision</h4><p>Strict quality control during execution.</p></div>
-            <div class="why-card"><i class="fas fa-map-marker-alt"></i><h4>Kolkata Service Coverage</h4><p>Serving Laketown and surrounding areas.</p></div>
-        </div>
-    </section>
+<section id="why-us" class="why-us fade-in">
+<h2 class="section-title">Why Choose <span>Rudra Interior</span></h2>
+</section>
 
-    <section id="contact">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact Sagar Das</h3>
-                <div class="contact-item"><i class="fas fa-phone"></i> <span>+91 98364 21193<br>+91 79803 83184</span></div>
-                <div class="contact-item"><i class="fas fa-envelope"></i> <span>sagardas811980@gmail.com</span></div>
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> <span>Laketown, Kolkata, West Bengal</span></div>
-                
-                <div style="margin-top: 30px;">
-                    <a href="tel:+919836421193" class="contact-btn"><i class="fas fa-phone"></i> Call Now</a>
-                    <a href="https://wa.me/919836421193" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    <a href="mailto:sagardas811980@gmail.com" class="contact-btn"><i class="fas fa-file-invoice"></i> Get Quote</a>
-                </div>
-            </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14736.63581721522!2d88.3970034!3d22.6033877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276182c6114eb%3A0xc6bf8f5d05c21f92!2sLake%20Town%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin" width="100%" height="100%" style="border:0; border-radius:10px; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+<section id="contact" class="fade-in">
+<h2 class="section-title">Get In <span>Touch</span></h2>
+</section>
 
-    <a href="https://wa.me/919836421193" class="float-wa" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<a href="https://wa.me/919836421193" class="float-wa">
+<i class="fab fa-whatsapp"></i>
+</a>
 
-    <footer>
-        <p>&copy; 2026 Rudra Interior. Designed by Sagar Das. All Rights Reserved.</p>
-    </footer>
+<footer>
+<p>© 2026 Rudra Interior. All Rights Reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('show');
+}
+});
+});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
-
 </html>
-
-
-
