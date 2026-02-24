@@ -3,140 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rudra Interior | Premium Interior Solutions Kolkata</title>
+<title>Rudra Interior | Interior Designer in Kolkata</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
-/* ===== GLOBAL ===== */
-body{
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:#fafafa;
-    color:#1a1a1a;
-}
-
-section{padding:90px 8%;}
-h2{text-align:center;font-size:2.5rem;margin-bottom:60px;}
+body{margin:0;font-family:Poppins;background:#fafafa;color:#1a1a1a}
+section{padding:80px 8%}
+h2{text-align:center;font-size:2.5rem;margin-bottom:50px}
 h2 span{color:#D4AF37}
 
-/* ===== STICKY HEADER ===== */
+/* HEADER */
 header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(255,255,255,0.9);
-    backdrop-filter: blur(10px);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-    z-index:999;
+position:fixed;
+top:0;width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:999;
 }
 
 .logo img{height:60px}
-
-nav a{
-    margin-left:25px;
-    font-weight:600;
-    text-decoration:none;
-    color:#1a1a1a;
-}
-
+nav a{margin-left:25px;font-weight:600;color:#1a1a1a;text-decoration:none}
 nav a:hover{color:#D4AF37}
 
-/* MOBILE MENU */
-.menu-btn{display:none;font-size:26px}
-
-@media(max-width:768px){
-nav{
-    position:absolute;
-    top:80px;
-    right:0;
-    background:white;
-    width:100%;
-    flex-direction:column;
-    display:none;
-}
-nav a{padding:15px;display:block;text-align:center}
-nav.active{display:flex}
-.menu-btn{display:block}
-}
-
-/* ===== HERO SLIDER ===== */
+/* HERO */
 .hero{
-    height:100vh;
-    position:relative;
-    overflow:hidden;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0') center/cover;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding-top:80px;
 }
 
-.slide{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    background-position:center;
-    opacity:0;
-    transition:1s;
+.hero h1{font-size:3.2rem;margin-bottom:10px}
+.hero p{font-size:1.2rem;color:#D4AF37;margin-bottom:30px}
+
+.cta-buttons a{
+display:inline-block;
+padding:16px 32px;
+margin:10px;
+border-radius:6px;
+font-weight:700;
+text-decoration:none;
 }
 
-.slide.active{opacity:1}
+.btn-call{background:#D4AF37;color:white}
+.btn-wa{background:#25D366;color:white}
+.btn-quote{border:2px solid white;color:white}
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:rgba(0,0,0,0.6);
-    color:white;
+/* TRUST BAR */
+.trust{
+background:white;
+text-align:center;
+padding:25px;
+font-weight:600;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
 
-.hero h1{font-size:3.5rem}
-.hero p{color:#D4AF37;font-size:1.2rem}
-
-.btn{
-    padding:14px 30px;
-    margin:10px;
-    border-radius:5px;
-    font-weight:600;
-}
-
-.btn-gold{background:#D4AF37;color:white}
-.btn-outline{border:2px solid white;color:white}
-
-/* ===== SERVICES ===== */
-.service-grid{
+/* SERVICES */
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .card{
 background:white;
-padding:30px;
-text-align:center;
+padding:25px;
 border-radius:10px;
+text-align:center;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(0,0,0,.1);
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,.08);
 }
 
-.card i{
-font-size:40px;
-color:#D4AF37;
-margin-bottom:15px;
-}
+.card i{font-size:40px;color:#D4AF37;margin-bottom:15px}
 
-/* ===== PROJECTS ===== */
+/* PROJECTS */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -145,44 +101,22 @@ gap:20px;
 
 .gallery img{
 width:100%;
-height:250px;
+height:240px;
 object-fit:cover;
 border-radius:10px;
-cursor:pointer;
-transition:.3s;
 }
 
-.gallery img:hover{transform:scale(1.05)}
-
-/* LIGHTBOX */
-.lightbox{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.9);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:9999;
-}
-
-.lightbox img{max-width:90%;max-height:90%}
-
-/* ===== TESTIMONIAL ===== */
-.testimonials{
+/* OFFER SECTION */
+.offer{
 background:#1a1a1a;
 color:white;
 text-align:center;
+padding:60px 8%;
 }
 
-.testimonial{
-max-width:700px;
-margin:auto;
-}
+.offer h2{color:white}
 
-/* ===== CONTACT ===== */
+/* CONTACT */
 .contact-box{
 background:white;
 padding:40px;
@@ -191,22 +125,22 @@ text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
 
-/* FLOAT BUTTON */
-.float-wa{
+/* FLOAT BUTTONS */
+.float-wa,.float-call{
 position:fixed;
-bottom:20px;
 right:20px;
-background:#25D366;
-color:white;
-width:60px;
-height:60px;
+width:60px;height:60px;
 display:flex;
 justify-content:center;
 align-items:center;
 border-radius:50%;
-font-size:30px;
+font-size:28px;
+color:white;
 z-index:999;
 }
+
+.float-wa{bottom:20px;background:#25D366}
+.float-call{bottom:90px;background:#D4AF37}
 
 /* FOOTER */
 footer{
@@ -223,74 +157,75 @@ padding:20px;
 
 <header>
 <div class="logo"><img src="logo.png"></div>
-
-<nav id="nav">
+<nav>
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
-
-<div class="menu-btn" onclick="toggleMenu()">
-<i class="fas fa-bars"></i>
-</div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
+<div>
+<h1>Kolkata’s Trusted Interior Designer</h1>
+<p>Custom Interior Solutions by Rudra Interior</p>
 
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0')"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6')"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1540518614846-7eded433c457')"></div>
-
-<div class="hero-content">
-<h1>Creative Interior Solutions</h1>
-<p>Designed & Executed by Rudra Interior</p>
-
-<a href="#projects" class="btn btn-gold">View Projects</a>
-<a href="tel:+919836421193" class="btn btn-outline">Call Now</a>
+<div class="cta-buttons">
+<a href="tel:+919836421193" class="btn-call">📞 Call Now</a>
+<a href="https://wa.me/919836421193" class="btn-wa">💬 WhatsApp</a>
+<a href="#contact" class="btn-quote">Get Free Quote</a>
 </div>
 
+<p>⭐ Free Site Visit • Custom Design • Budget to Premium</p>
+</div>
 </section>
+
+<div class="trust">
+✔ One-Man Dedicated Designer &nbsp;&nbsp;
+✔ Branded Materials &nbsp;&nbsp;
+✔ On-Site Supervision &nbsp;&nbsp;
+✔ Serving All Kolkata
+</div>
 
 <!-- SERVICES -->
 <section id="services">
 <h2>Our <span>Services</span></h2>
 
-<div class="service-grid">
+<div class="grid">
 <div class="card"><i class="fas fa-bed"></i><h3>Bedroom Interior</h3></div>
 <div class="card"><i class="fas fa-utensils"></i><h3>Modular Kitchen</h3></div>
 <div class="card"><i class="fas fa-door-closed"></i><h3>Wardrobe</h3></div>
 <div class="card"><i class="fas fa-tv"></i><h3>TV Unit</h3></div>
 <div class="card"><i class="fas fa-border-all"></i><h3>False Ceiling</h3></div>
-<div class="card"><i class="fas fa-couch"></i><h3>Furniture</h3></div>
+<div class="card"><i class="fas fa-building"></i><h3>Commercial Interior</h3></div>
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2>Our <span>Projects</span></h2>
+<h2>Recent <span>Projects</span></h2>
 
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d" onclick="openLightbox(this)">
-<img src="https://images.unsplash.com/photo-1540518614846-7eded433c457" onclick="openLightbox(this)">
-<img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2" onclick="openLightbox(this)">
+<img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d">
+<img src="https://images.unsplash.com/photo-1540518614846-7eded433c457">
+<img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2">
 </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section class="testimonials">
-<h2>Client <span>Reviews</span></h2>
+<!-- OFFER -->
+<section class="offer">
+<h2>🎁 FREE Site Visit in Kolkata</h2>
+<p>Book today and get personalized design consultation at your home.</p>
 
-<div class="testimonial">
-<p>"Excellent work, premium finish and very professional execution."</p>
-<h4>— Kolkata Client</h4>
-</div>
+<a href="https://wa.me/919836421193" style="background:#25D366;padding:15px 30px;border-radius:6px;color:white;text-decoration:none;font-weight:700">
+Book on WhatsApp
+</a>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact <span>Us</span></h2>
+<h2>Contact <span>Rudra Interior</span></h2>
 
 <div class="contact-box">
 <p>📍 Laketown, Kolkata</p>
@@ -299,44 +234,12 @@ padding:20px;
 </div>
 </section>
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-<img id="lightbox-img">
-</div>
-
-<a href="https://wa.me/919836421193" class="float-wa">
-<i class="fab fa-whatsapp"></i>
-</a>
+<a href="tel:+919836421193" class="float-call"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/919836421193" class="float-wa"><i class="fab fa-whatsapp"></i></a>
 
 <footer>
-<p>© 2026 Rudra Interior — All Rights Reserved</p>
+<p>© 2026 Rudra Interior — Kolkata Interior Designer</p>
 </footer>
-
-<script>
-
-/* MOBILE MENU */
-function toggleMenu(){
-document.getElementById("nav").classList.toggle("active");
-}
-
-/* SLIDER */
-let slides=document.querySelectorAll(".slide");
-let i=0;
-setInterval(()=>{
-slides[i].classList.remove("active");
-i=(i+1)%slides.length;
-slides[i].classList.add("active");
-},4000);
-
-/* LIGHTBOX */
-function openLightbox(img){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=img.src;
-}
-function closeLightbox(){
-document.getElementById("lightbox").style.display="none";
-}
-
-</script>
 
 </body>
 </html>
