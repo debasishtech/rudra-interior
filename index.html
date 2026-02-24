@@ -4,220 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rudra Interior | Luxury Interior Designer in Kolkata</title>
+<title>Rudra Interior | Luxury Interior Designer Kolkata</title>
 
-<meta name="description" content="Luxury interior designer in Kolkata. Modular kitchen, bedroom interior, custom furniture. Free site visit by Rudra Interior.">
+<link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-:root{
---gold:#D4AF37;
---dark:#0f0f0f;
---white:#fff;
-}
-
-/* ===== GLOBAL ===== */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#111;color:white}
-
-/* ===== HEADER ===== */
-header{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(12px);
-z-index:999;
-}
-
-.logo{display:flex;align-items:center;font-weight:700;font-size:1.7rem}
-.logo img{height:55px;margin-right:10px}
-.logo span{color:var(--gold)}
-
-.nav-links{display:flex;gap:30px}
-.nav-links a{color:white;text-decoration:none}
-.nav-links a:hover{color:var(--gold)}
-
-/* ===== MOBILE MENU ===== */
-.menu-btn{display:none;font-size:28px}
-
-/* ===== HERO SLIDER ===== */
-.hero{
-height:100vh;
-overflow:hidden;
-position:relative;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-opacity:0;
-transition:1s;
-}
-
-.slide.active{opacity:1}
-
-.slide h1{font-size:3.8rem;margin-bottom:15px}
-.slide p{color:#ddd;margin-bottom:25px}
-
-.btn{
-background:var(--gold);
-color:white;
-padding:15px 35px;
-text-decoration:none;
-border-radius:5px;
-font-weight:600;
-}
-
-/* ===== SECTIONS ===== */
-section{padding:90px 8%}
-
-.section-title{text-align:center;font-size:2.5rem;margin-bottom:60px}
-.section-title span{color:var(--gold)}
-
-/* ===== SERVICES ===== */
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px
-}
-
-.service-card{
-background:#1a1a1a;
-padding:35px;
-text-align:center;
-border-radius:10px;
-transition:.4s
-}
-
-.service-card:hover{transform:translateY(-10px)}
-
-.service-card i{
-font-size:2.5rem;
-color:var(--gold);
-margin-bottom:10px
-}
-
-/* ===== FILTER PROJECTS ===== */
-.filter-btns{text-align:center;margin-bottom:30px}
-
-.filter-btns button{
-background:#222;
-color:white;
-border:none;
-padding:10px 20px;
-margin:5px;
-cursor:pointer
-}
-
-.project-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px
-}
-
-.project{
-position:relative
-}
-
-.project img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:8px
-}
-
-/* ===== BEFORE AFTER ===== */
-.before-after{max-width:600px;margin:auto}
-.before-after img{width:100%;display:block}
-.slider{
-position:absolute;
-top:0;
-left:50%;
-width:4px;
-height:100%;
-background:var(--gold);
-cursor:ew-resize
-}
-
-/* ===== CONTACT ===== */
-.contact-form{
-max-width:600px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px
-}
-
-input,textarea{
-padding:12px;
-border:none;
-border-radius:5px
-}
-
-/* ===== MAP ===== */
-.map iframe{width:100%;height:350px;border:0}
-
-/* ===== FLOAT WA ===== */
-.float-wa{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-width:65px;height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-}
-
-/* ===== SCROLL REVEAL ===== */
-.reveal{opacity:0;transform:translateY(40px);transition:.6s}
-.reveal.active{opacity:1;transform:translateY(0)}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-
-.nav-links{
-display:none;
-position:absolute;
-top:70px;
-right:0;
-background:#000;
-flex-direction:column;
-width:200px;
-padding:20px
-}
-
-.nav-links.show{display:flex}
-
-.menu-btn{display:block}
-
-.slide h1{font-size:2.4rem}
-
-}
-</style>
 </head>
-
 <body>
 
 <header>
 <div class="logo">
-<img src="logo.png"> Rudra <span>Interior</span>
+<img src="logo.png">
+Rudra <span>Interior</span>
 </div>
 
 <div class="menu-btn"><i class="fas fa-bars"></i></div>
@@ -230,74 +30,64 @@ padding:20px
 </nav>
 </header>
 
-<!-- HERO SLIDER -->
+<!-- HERO -->
 <section class="hero">
+<div class="hero-content">
+<h1>Kolkata’s Trusted Interior Designer</h1>
+<p>Luxury & Custom Interior Solutions</p>
 
-<div class="slide active" style="background:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0') center/cover">
-<div>
-<h1>Luxury Interior Design</h1>
-<p>Kolkata’s Trusted Experts</p>
-<a href="https://wa.me/919836421193" class="btn">Get Consultation</a>
+<div class="btn-group">
+<a href="tel:+919836421193" class="btn gold">📞 Call Now</a>
+<a href="https://wa.me/919836421193" class="btn outline">💬 WhatsApp</a>
 </div>
 </div>
-
-<div class="slide" style="background:url('https://images.unsplash.com/photo-1540518614846-7eded433c457') center/cover">
-<div>
-<h1>Custom Dream Spaces</h1>
-<p>Premium Interior Solutions</p>
-<a href="#" class="btn">View Projects</a>
-</div>
-</div>
-
 </section>
 
 <!-- SERVICES -->
-<section class="reveal">
+<section>
 <h2 class="section-title">Our <span>Services</span></h2>
 
 <div class="service-grid">
-<div class="service-card"><i class="fas fa-bed"></i>Bedroom Interior</div>
-<div class="service-card"><i class="fas fa-utensils"></i>Modular Kitchen</div>
-<div class="service-card"><i class="fas fa-couch"></i>Furniture</div>
-<div class="service-card"><i class="fas fa-tv"></i>TV Unit</div>
+
+<div class="service-card"><i class="fas fa-bed"></i><h3>Bedroom</h3></div>
+<div class="service-card"><i class="fas fa-utensils"></i><h3>Modular Kitchen</h3></div>
+<div class="service-card"><i class="fas fa-tv"></i><h3>TV Unit</h3></div>
+<div class="service-card"><i class="fas fa-couch"></i><h3>Furniture</h3></div>
+<div class="service-card"><i class="fas fa-building"></i><h3>Commercial</h3></div>
+<div class="service-card"><i class="fas fa-border-all"></i><h3>False Ceiling</h3></div>
+
 </div>
 </section>
 
 <!-- PROJECT FILTER -->
-<section class="reveal">
+<section>
 <h2 class="section-title">Projects</h2>
 
 <div class="filter-btns">
 <button onclick="filter('all')">All</button>
 <button onclick="filter('kitchen')">Kitchen</button>
 <button onclick="filter('bedroom')">Bedroom</button>
+<button onclick="filter('living')">Living</button>
+<button onclick="filter('office')">Office</button>
 </div>
 
 <div class="project-grid">
+
 <div class="project kitchen"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d"></div>
 <div class="project bedroom"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457"></div>
+<div class="project living"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2"></div>
+<div class="project office"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c"></div>
+
 </div>
 </section>
 
-<!-- BEFORE AFTER -->
-<section class="reveal">
-<h2 class="section-title">Before / After</h2>
+<!-- BEFORE AFTER SMALL -->
+<section>
+<h2 class="section-title">Before & After</h2>
 
 <div class="before-after">
 <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
 </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section class="reveal">
-<h2 class="section-title">Get Quote</h2>
-
-<form class="contact-form">
-<input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Phone Number">
-<textarea placeholder="Project Details"></textarea>
-<button class="btn">Submit</button>
-</form>
 </section>
 
 <!-- MAP -->
@@ -311,28 +101,10 @@ padding:20px
 
 <script>
 
-/* HERO SLIDER */
-let slides=document.querySelectorAll('.slide');
-let index=0;
-setInterval(()=>{
-slides[index].classList.remove('active');
-index=(index+1)%slides.length;
-slides[index].classList.add('active');
-},4000);
-
 /* MOBILE MENU */
 document.querySelector('.menu-btn').onclick=()=>{
 document.querySelector('.nav-links').classList.toggle('show');
 }
-
-/* SCROLL REVEAL */
-window.addEventListener('scroll',()=>{
-document.querySelectorAll('.reveal').forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-80){
-el.classList.add('active');
-}
-})
-});
 
 /* FILTER */
 function filter(cat){
