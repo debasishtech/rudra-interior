@@ -272,3 +272,193 @@ height:220px;
 }
 
 }
+/* =================================
+   MAKE ALL SECTIONS LOOK LIKE SERVICES
+================================= */
+
+/* Shared luxury card style */
+
+.about-text,
+.about-img,
+.gallery-item,
+.why-card,
+.contact-info,
+iframe{
+background: rgba(0,0,0,0.65);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(212,175,55,0.25);
+border-radius: 14px;
+transition: .4s;
+position: relative;
+overflow: hidden;
+}
+
+/* GOLD SWEEP EFFECT (same as service-card) */
+
+.about-text::before,
+.about-img::before,
+.gallery-item::before,
+.why-card::before,
+.contact-info::before,
+iframe::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:120%;
+height:100%;
+background:linear-gradient(120deg,transparent,var(--gold),transparent);
+transition:.6s;
+z-index:1;
+pointer-events:none;
+}
+
+.about-text:hover::before,
+.about-img:hover::before,
+.gallery-item:hover::before,
+.why-card:hover::before,
+.contact-info:hover::before,
+iframe:hover::before{
+left:120%;
+}
+
+/* Hover lift like services */
+
+.about-text:hover,
+.about-img:hover,
+.gallery-item:hover,
+.why-card:hover,
+.contact-info:hover,
+iframe:hover{
+transform: translateY(-14px);
+box-shadow: 0 0 35px rgba(212,175,55,0.5);
+}
+
+/* =================================
+   ABOUT SECTION GRID FIX
+================================= */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+align-items:stretch;
+}
+
+.about-text{
+padding:45px;
+z-index:2;
+}
+
+.about-img{
+min-height:420px;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6") center/cover;
+}
+
+/* =================================
+   GALLERY PROJECT CARDS
+================================= */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.gallery-item img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:12px;
+transition:.5s;
+z-index:0;
+position:relative;
+}
+
+.gallery-item:hover img{
+transform:scale(1.08);
+}
+
+/* Overlay stays above sweep */
+
+.gallery-overlay{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+background:linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+padding:20px;
+transform:translateY(100%);
+transition:.4s;
+z-index:2;
+}
+
+.gallery-item:hover .gallery-overlay{
+transform:translateY(0);
+}
+
+/* =================================
+   WHY US CARDS
+================================= */
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.why-card{
+padding:38px;
+text-align:center;
+z-index:2;
+}
+
+.why-card i{
+font-size:2.6rem;
+color:var(--gold);
+margin-bottom:14px;
+}
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+.contact-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+align-items:stretch;
+}
+
+.contact-info{
+padding:45px;
+z-index:2;
+}
+
+iframe{
+min-height:420px;
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media(max-width:900px){
+
+.about-grid,
+.contact-container{
+grid-template-columns:1fr;
+}
+
+.about-img,
+iframe{
+min-height:300px;
+}
+
+.gallery-item img{
+height:220px;
+}
+
+}
